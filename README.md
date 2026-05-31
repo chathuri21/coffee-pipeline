@@ -33,11 +33,11 @@ docker compose run products-writer php artisan write:products --path=/data/other
 ### Run tests
 
 ```bash
-# Install dependencies locally first
-composer install
+# Find your container name
+docker ps
 
 # Run all tests
-php artisan test
+docker exec -it <container_name> php artisan test
 ```
 
 ---
