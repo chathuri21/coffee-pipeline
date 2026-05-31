@@ -33,11 +33,8 @@ docker compose run products-writer php artisan write:products --path=/data/other
 ### Run tests
 
 ```bash
-# Find your container name
-docker ps
-
 # Run all tests
-docker exec -it <container_name> php artisan test
+docker docker compose run --rm products-writer-test
 ```
 
 ---
