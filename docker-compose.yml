@@ -1,0 +1,15 @@
+services:
+  products-writer:
+    build: .
+    volumes:
+      - ./data:/data:ro       # feed file read from here
+      - ./output:/output      # sqlite written here
+    environment:
+      APP_NAME: CoffeeWriter
+      APP_ENV: production
+      APP_DEBUG: false
+      APP_KEY: base64:u7diQ9v8/lRx41OL9a7aCYSfWKgnG+e9gXPUTwsBNos=
+      LOG_CHANNEL: stderr
+      DB_CONNECTION: sqlite
+      DB_DATABASE: /output/products.sqlite
+      FEED_PATH: /data/coffee_feed.jsonl
