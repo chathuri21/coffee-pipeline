@@ -15,8 +15,6 @@ services:
       FEED_PATH: /data/coffee_feed.jsonl
   products-writer-test:
     build: .
-    volumes:
-      - ./.env:/app/.env:ro
     environment:
       DB_CONNECTION: sqlite
     command: php artisan test
