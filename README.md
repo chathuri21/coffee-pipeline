@@ -34,7 +34,7 @@ docker compose run products-writer php artisan write:products --path=/data/other
 
 ```bash
 # Run all tests
-docker docker compose run --rm products-writer-test
+docker compose run --rm products-writer-test
 ```
 
 ---
