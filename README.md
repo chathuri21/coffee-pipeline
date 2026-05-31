@@ -14,7 +14,7 @@ rows (one row per product × variant), and writes the result to SQLite.
 
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
+git clone <repo-url>
 cd coffee-pipeline
 
 # 2. Run
