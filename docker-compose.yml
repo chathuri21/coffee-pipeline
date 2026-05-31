@@ -13,3 +13,11 @@ services:
       DB_CONNECTION: sqlite
       DB_DATABASE: /output/products.sqlite
       FEED_PATH: /data/coffee_feed.jsonl
+  products-writer-test:
+    build: .
+    environment:
+      DB_CONNECTION: sqlite
+    command: php artisan test
+    depends_on:
+      - products-writer
+    restart: "no"
